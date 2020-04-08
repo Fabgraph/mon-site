@@ -1,31 +1,24 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: 'amerikaregular';
-    src: url('../font/AMERIKA_-webfont.eot');
-    src: url('../font/AMERIKA_-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/AMERIKA_-webfont.woff2') format('woff2'),
-         url('../font/AMERIKA_-webfont.woff') format('woff'),
-         url('../font/AMERIKA_-webfont.ttf') format('truetype'),
-         url('../font/AMERIKA_-webfont.svg#amerikaregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
+/*---Mise en forme global---*/
 body {
     background-image: url("../img/motif-gateaux.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
 
+/*---Mise en forme de mes titres ---*/
 header h1 {
     color: #ae5b89;
     font-family: 'Courgette', cursive;
     font-size: 3em;
     text-shadow: 4px 3px 6px grey;
     box-shadow: 4px 1px 6px;
-    padding: 2% 2% 2% 4%;
+    vertical-align: top; 
+    width: 75%;
+    display: inline-block;
+    text-align: center;
+    padding: 2% 0 0 2%;
 }
 
 h2 {
@@ -47,27 +40,115 @@ h3 {
     font-family: 'Courgette', cursive;
 }
 
+/*---Mise en forme du header---*/
+header a img {
+    padding: 35px 0;
+    display: inline-block;
+    width: 15%;
+}
+
+/*---Mise en forme de notre menu principal---*/
+/*---exemple de menu vertical
+#principal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #ae5b8980;
+    border-style: solid;
+    border-color: #ae5b89;
+    border-width: 2px 2px 0 2px;
+}
+
+#principal a {
+    display: block;
+    color: darkslategrey;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 8px 16px; 
+}
+
+#principal li {
+    text-align: center;
+    border-bottom: 2px solid #ae5b89;
+}
+
+#principal li a:hover, #principale li a:focus {
+    background-color: #ae5b89;
+    color: #fff;
+    text-decoration: underline;
+}
+
+#principal li a:active {
+   background-color: coral;
+   color: #fff;
+} 
+---*/
+
+nav {
+    margin-top: 2%;
+}
+ 
+
+/*---Exemple de menu horizontal*/
+
+
+/*---Mise en forme de mes paragraphe---*/
 p {
     color: #15adc4;
     text-align: justify;
     font-size: 18px;
     font-family: sans-serif;
     margin: 0px 15px;
+    width: 49%;
 }
 
+#concept {
+    background-image: url("../img/crepes-gateau.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+}
+
+/* alignement paragraphes*/
+
+#p1 {
+    width: 45%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+#p2 {
+    width: 45%;
+    display: inline-block;
+    display: inline-block;
+}
+
+/*---Mise en forme de la vidéo---*/
 video {
     border: 4px outset #ae5b89;
     margin: 0px 15px;
 }
 
+/*---Mise en forme de l'audio---*/
 audio {
     margin: 0px 15px;
 }
 
-header img {
-    padding: 10px;
-}
 
 .tableau {
     padding: 20px;
+}
+
+/*---Mise en forme FOODTRUCK---*/
+.truck1 {
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 2%;
+}
+
+.truck2 {
+    width: 55%;
+    display: inline-block;
 }
