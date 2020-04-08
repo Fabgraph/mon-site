@@ -83,19 +83,48 @@ header a img {
    background-color: coral;
    color: #fff;
 } 
----*/
 
 nav {
     margin-top: 2%;
 }
- 
+---*/ 
 
 /*---Exemple de menu horizontal*/
+#principal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ae5b89;
+    border-radius: 5px;
+}
 
+#principal li {
+    float: left;
+    border-right: 1px solid #fff;
+}
+
+#principal li:last-child {
+    border: none;
+}
+
+#principal a {
+    display: block;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+}
+
+#principal li a:hover {
+    background-color: #e86ea5;
+    color: #fff;
+}
 
 /*---Mise en forme de mes paragraphe---*/
 p {
-    color: #15adc4;
+    color: #21611F;
     text-align: justify;
     font-size: 18px;
     font-family: sans-serif;
@@ -151,4 +180,34 @@ audio {
 .truck2 {
     width: 55%;
     display: inline-block;
+}
+
+/*---Mise en forme du menu footer---*/
+#menufooter {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ae5b89;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#menufooter li {
+    display: inline;
+    list-style: none;
+}
+
+#menufooter a {
+    display: inline-block;
+    background-color: #ae5b89;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    padding: 13px 16px;
+}
+
+#menufooter li a:hover {
+    background: #e86ea5 url("../img/fond.png") no-repeat;
+    
 }
