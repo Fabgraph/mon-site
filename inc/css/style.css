@@ -24,12 +24,14 @@ header h1 {
 h2 {
     font-size: 24px;
     text-transform: uppercase;
-    color: #ae5b89;
+    color: dimgray; 
     font-family: 'Courgette', cursive;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    border-radius: 20px;
+    background-color: #e86ea5;
 }
 
 h3 {
@@ -157,14 +159,16 @@ p {
 video {
     border: 4px outset #ae5b89;
     margin: 0px 15px;
+    border-radius: 5px;
 }
 
 /*---Mise en forme de l'audio---*/
 audio {
     margin: 0px 15px;
+    border-radius: 5px;
 }
 
-
+/*---Mise en forme du tableau---*/
 .tableau {
     padding: 20px;
 }
@@ -180,6 +184,69 @@ audio {
 .truck2 {
     width: 55%;
     display: inline-block;
+}
+
+.food {
+    margin-top: 1.5%;
+}
+
+/*---Test sur les transitions---*/
+#morph {
+    background-color: #e86ea570;
+    width: 300px;
+    height: 300px;
+    -o-transition: 3s background-color 3s, width 3s ease-out;
+    -moz-transition: 3s background-color 3s, width 3s ease-out;
+    -webkit-transition: 3s background-color 3s, width 3s ease-out;
+    transition: 3s background-color 3s, width 3s ease-out;
+} 
+
+#morph p {
+    color: darkslategray;
+}
+
+#morph:hover {
+    background-color: #ae5b89;
+    width: 75%;
+}
+
+/*---Test animation simple---*/
+#anim {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    -o-animation-name: cube;
+    -o-animation-duration: 5s;
+    -webkit-animation-name: cube;
+    -webkit-animation-duration: 5s;
+    -moz-animation-name: cube;
+    -moz-animation-duration: 5s;
+    animation-name: cube;
+    animation-duration: 5s;
+}
+
+/*---Syntaxe de base---*/
+@keyframes cube {
+    from {background-color: aquamarine; width: 100px;}
+    to{background-color: darkblue; width: 100%;}
+}
+
+/*---Syntaxe ---*/
+@-o-keyframes cube {
+    from {background-color: aquamarine; width: 100px;}
+    to{background-color: darkblue; width: 100%;}
+}
+
+/*---Syntaxe ---*/
+@-webkit-keyframes cube {
+    from {background-color: aquamarine; width: 100px;}
+    to{background-color: darkblue; width: 100%;}
+}
+
+/*---Syntaxe ---*/
+@-moz-keyframes cube {
+    from {background-color: aquamarine; width: 100px;}
+    to{background-color: darkblue; width: 100%;}
 }
 
 /*---Mise en forme du menu footer---*/
