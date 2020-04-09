@@ -19,6 +19,9 @@ header h1 {
     display: inline-block;
     text-align: center;
     padding: 2% 0 0 2%;
+    position: relative;
+    animation-name: titre;
+    animation-duration: 2s;
 }
 
 h2 {
@@ -47,6 +50,44 @@ header a img {
     padding: 35px 0;
     display: inline-block;
     width: 15%;
+}
+
+/*---Animation logo header---*/
+#logo {
+    position: relative;
+    animation-name: moovelogo;
+    animation-duration: 2s;
+}
+
+@keyframes moovelogo {
+    from{left: -200px;}
+    to {left: 0;}
+}
+
+@-o-keyframes moovelogo {
+    from{left: -200px;}
+    to {left: 0;}
+}
+
+@-webkit-keyframes moovelogo {
+    from{left: -200px;}
+    to {left: 0;}
+}
+
+/*---Animation h1---*/
+@keyframes titre {
+    from{top: -150px;}
+    to{top: 0;}
+}
+
+@-o-keyframes titre {
+    from{top: -150px;}
+    to{top: 0;}
+}
+
+@-webkit-keyframes titre {
+    from{top: -150px;}
+    to{top: 0;}
 }
 
 /*---Mise en forme de notre menu principal---*/
@@ -158,13 +199,10 @@ p {
 /*---Mise en forme de la vidéo---*/
 video {
     border: 4px outset #ae5b89;
-    margin: 0px 15px;
-    border-radius: 5px;
 }
 
 /*---Mise en forme de l'audio---*/
 audio {
-    margin: 0px 15px;
     border-radius: 5px;
 }
 
@@ -300,28 +338,6 @@ audio {
     100%{left: 0; top: 0;}
 }
 
-/*---Animation logo header---*/
-#logo {
-    position: relative;
-    animation-name: moovelogo;
-    animation-duration: 2s;
-}
-
-@keyframes moovelogo {
-    from{left: -200px;}
-    to {left: 0;}
-}
-
-@-o-keyframes moovelogo {
-    from{left: -200px;}
-    to {left: 0;}
-}
-
-@-webkit-keyframes moovelogo {
-    from{left: -200px;}
-    to {left: 0;}
-}
-
 /*---Mise en forme du menu footer---*/
 #menufooter {
     margin: 0;
@@ -350,4 +366,24 @@ audio {
 #menufooter li a:hover {
     background: #e86ea5 url("../img/fond.png") no-repeat;
     
+}
+
+/*---Responsive---*/
+
+/*---Ecran mobile---*/
+@media screen and (max-width:439px) {
+    header {
+        text-align: center;
+    }
+    h1 {
+        width: 100%;
+    }
+    
+    header a img {
+        width: 30%;
+    }
+    
+    video {
+        width: 100%;
+    }
 }
