@@ -223,6 +223,7 @@ audio {
     -moz-animation-duration: 5s;
     animation-name: cube;
     animation-duration: 5s;
+    animation-fill-mode: both;
 }
 
 /*---Syntaxe de base---*/
@@ -247,6 +248,78 @@ audio {
 @-moz-keyframes cube {
     from {background-color: aquamarine; width: 100px;}
     to{background-color: darkblue; width: 100%;}
+}
+
+/*---Test animation complexe---*/
+#anim2 {
+    width: 150px;
+    height: 150px;
+    background-color: darkgreen;
+    position: relative;
+    -o-animation-name: cube2;
+    -o-animation-duration: 7s;
+    -webkit-animation-name: cube2;
+    -webkit-animation-duration: 7s;
+    -moz-animation-name: cube2;
+    -moz-animation-duration: 7s;
+    animation-name: cube2;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cube2 {
+    0%{left: 0; top: 0;}
+    25%{left: 300px; top:0; background-color: #7fffd460; border-radius: 0;}
+    50%{left: 300px; top: 300px; background: url("../img/Logo.png") no-repeat; border-radius: 50%;}
+    75%{left: 0; top: 300px; background-color: #8a2be260; border-radius: 0;}
+    100%{left: 0; top: 0;}
+}
+
+@-o-keyframes cube2 {
+    0%{left: 0; top: 0;}
+    25%{left: 300px; top:0; background-color: #7fffd460; border-radius: 0;}
+    50%{left: 300px; top: 300px; background: url("../img/Logo.png") no-repeat; border-radius: 100%;}
+    75%{left: 0; top: 300px; background-color: #8a2be260; border-radius: 0;}
+    100%{left: 0; top: 0;}
+}
+
+@-webkit-keyframes cube2 {
+    0%{left: 0; top: 0;}
+    25%{left: 300px; top:0; background-color: #7fffd460; border-radius: 0;}
+    50%{left: 300px; top: 300px; background: url("../img/Logo.png") no-repeat; border-radius: 100%;}
+    75%{left: 0; top: 300px; background-color: #8a2be260; border-radius: 0;}
+    100%{left: 0; top: 0;}
+}
+
+@-mz-keyframes cube2 {
+    0%{left: 0; top: 0;}
+    25%{left: 300px; top:0; background-color: #7fffd460; border-radius: 0;}
+    50%{left: 300px; top: 300px; background: url("../img/Logo.png") no-repeat; border-radius: 100%;}
+    75%{left: 0; top: 300px; background-color: #8a2be260; border-radius: 0;}
+    100%{left: 0; top: 0;}
+}
+
+/*---Animation logo header---*/
+#logo {
+    position: relative;
+    animation-name: moovelogo;
+    animation-duration: 2s;
+}
+
+@keyframes moovelogo {
+    from{left: -200px;}
+    to {left: 0;}
+}
+
+@-o-keyframes moovelogo {
+    from{left: -200px;}
+    to {left: 0;}
+}
+
+@-webkit-keyframes moovelogo {
+    from{left: -200px;}
+    to {left: 0;}
 }
 
 /*---Mise en forme du menu footer---*/
