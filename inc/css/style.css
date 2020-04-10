@@ -90,6 +90,11 @@ header a img {
     to{top: 0;}
 }
 
+@-moz-keyframes titre {
+    from{top: -150px;}
+    to{top: 0;}
+}
+
 /*---Mise en forme de notre menu principal---*/
 /*---exemple de menu vertical
 #principal {
@@ -116,7 +121,7 @@ header a img {
     border-bottom: 2px solid #ae5b89;
 }
 
-#principal li a:hover, #principale li a:focus {
+#principal li a:hover, #principale li a:focus, #principal li a:active {
     background-color: #ae5b89;
     color: #fff;
     text-decoration: underline;
@@ -160,7 +165,7 @@ nav {
     padding: 8px 16px;
 }
 
-#principal li a:hover {
+#principal li a:hover, #principal li a:active {
     background-color: #e86ea5;
     color: #fff;
 }
@@ -193,7 +198,6 @@ p {
 #p2 {
     width: 45%;
     display: inline-block;
-    display: inline-block;
 }
 
 /*---Mise en forme de la vidéo---*/
@@ -202,7 +206,7 @@ video {
 }
 
 /*---Mise en forme de l'audio---*/
-audio {
+#minuteur {
     border-radius: 5px;
 }
 
@@ -330,7 +334,7 @@ audio {
     100%{left: 0; top: 0;}
 }
 
-@-mz-keyframes cube2 {
+@-moz-keyframes cube2 {
     0%{left: 0; top: 0;}
     25%{left: 300px; top:0; background-color: #7fffd460; border-radius: 0;}
     50%{left: 300px; top: 300px; background: url("../img/Logo.png") no-repeat; border-radius: 100%;}
@@ -368,6 +372,20 @@ audio {
     
 }
 
+/*---Mise en forme du tableau---*/
+table, table th, table td {
+    border-collapse: collapse;
+    border: 2px solid #e86ea5;
+    font-family: sans-serif;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #ae5b89;
+    color: #fff;
+}
+
 /*---Responsive---*/
 
 /*---Ecran mobile---*/
@@ -375,8 +393,10 @@ audio {
     header {
         text-align: center;
     }
-    h1 {
-        width: 100%;
+    header h1 {
+        width: 90%;
+        margin-top: -1%;
+        animation-name: test;
     }
     
     header a img {
@@ -384,6 +404,53 @@ audio {
     }
     
     video {
-        width: 100%;
+        width: 95%;
     }
+    
+    #principal {
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #principal li {
+        display: block;
+        float: none;
+        border-right: 0;
+        border-bottom: 1px solid #fff;
+    }
+    
+    #principal a {
+        padding: 16px 16px;
+    }
+    
+    #anim2, #morph, #anim {
+        display: none;
+    }
+    
+    p {
+        width: 95%;
+        margin: auto;
+    }
+    
+   #p1, #p2 {
+        width: 95%;
+    }
+    
+    .truck1 {
+        width: 95%;
+        margin: auto;
+    }
+    
+    .truck2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+     #minuteur {
+        position: static;
+        margin: 0 15%;
+    }
+    
+   
 }
