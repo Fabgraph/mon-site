@@ -386,6 +386,29 @@ table th {
     color: #fff;
 }
 
+/*---Test Flexbox---*/
+
+#conteneur {
+    height: 400px;
+    margin-top: 50px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.element {
+    padding: 20px;
+    background-color: aqua;
+    border: 1px solid;
+    margin: auto;
+}
+
+.element:nth-child(2) {
+    background-color: coral;
+}
+
 /*---Responsive---*/
 
 /*---Ecran mobile---*/
